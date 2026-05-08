@@ -24,13 +24,15 @@ repository               : "academicpages/academicpages.github.io"
 author:
   # Biographic information
   avatar           : "profile.png"
-  name             : "Your Sidebar Name"
-  pronouns         : # example: "she/her"  
-  bio              : "Short biography for the left-hand sidebar"
-  location         : "Earth"
-  employer         : "Red Brick University"
-  uri              : # URL
-  email            : "none@example.org" 
+  name             : "Stavros Eleftherakis"
+  pronouns         :
+  bio              : "Postdoctoral Associate, NYU Abu Dhabi"
+  location         : "Abu Dhabi, UAE"
+  employer         : "New York University Abu Dhabi"
+  email            : "se2937@nyu.edu"
+  googlescholar    : "https://scholar.google.com/citations?user=AU1FtaYAAAAJ&hl=en&oi=ao"
+  linkedin         : "stavros-eleftherakis"
+  
 
   # Academic websites
   academia         : # URL
