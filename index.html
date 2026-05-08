@@ -1,88 +1,313 @@
----
-layout: archive
-title: "Home"
-permalink: /
-author_profile: true
----
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Stavros Eleftherakis</title>
 
-<h1>Stavros Eleftherakis</h1>
+  <style>
+    :root {
+      --bg: #f7f7f5;
+      --card: #ffffff;
+      --text: #1f2933;
+      --muted: #5f6b7a;
+      --accent: #6b2fb9;
+      --accent-soft: #eee7fa;
+      --border: #e5e7eb;
+    }
 
-<p>
-  <strong>Postdoctoral Associate, New York University Abu Dhabi</strong><br>
-  Cyber Security and Privacy Lab
-</p>
+    * {
+      box-sizing: border-box;
+    }
 
-<p>
-  I am a postdoctoral researcher at New York University Abu Dhabi. My research focuses on secure positioning systems, wireless security, privacy in cellular networks, and AI-driven analysis for wireless systems.
-</p>
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.65;
+    }
 
-<p>
-  I received my PhD in Telematics Engineering from Universidad Carlos III de Madrid, where I worked on positioning systems and the security and privacy challenges of real-world wireless network deployments. My work spans WiFi and 5G positioning, privacy vulnerabilities in 5G standalone networks, and secure wireless infrastructure.
-</p>
+    a {
+      color: var(--accent);
+      text-decoration: none;
+    }
 
-<p>
-  My research has appeared in venues including ACM MobiCom, ACM WiSec, and IEEE Transactions on Mobile Computing, and has contributed to an Ericsson patent on integrity monitoring for 5G Timing Advance.
-</p>
+    a:hover {
+      text-decoration: underline;
+    }
 
-<p>
-  <a href="mailto:se2937@nyu.edu">Email</a> ·
-  <a href="https://www.linkedin.com/in/stavros-eleftherakis/">LinkedIn</a> ·
-  <a href="/files/cv.pdf">CV</a>
-</p>
+    .container {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 48px 24px;
+      display: grid;
+      grid-template-columns: 280px 1fr;
+      gap: 36px;
+    }
 
-<h2>Research Interests</h2>
+    .sidebar {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      padding: 28px;
+      height: fit-content;
+      position: sticky;
+      top: 24px;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.04);
+    }
 
-<ul>
-  <li>Secure positioning systems</li>
-  <li>Wireless security</li>
-  <li>5G/6G networks</li>
-  <li>Privacy in cellular systems</li>
-  <li>Applied machine learning for wireless networks</li>
-</ul>
+    .profile-img {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      object-fit: cover;
+      display: block;
+      margin: 0 auto 20px auto;
+      border: 4px solid var(--accent-soft);
+    }
 
-<h2>Selected Publications</h2>
+    .sidebar h1 {
+      font-size: 1.65rem;
+      line-height: 1.2;
+      margin: 0 0 8px 0;
+      text-align: center;
+    }
 
-<ul>
-  <li>
-    <strong>SoK: Evaluating 5G-Advanced Protocols Against Legacy and Emerging Privacy and Security Attacks</strong><br>
-    S. Eleftherakis, D. Giustiniano, N. Kourtellis<br>
-    <em>ACM WiSec, 2025</em>
-  </li>
+    .role {
+      color: var(--muted);
+      text-align: center;
+      margin-bottom: 20px;
+      font-size: 0.98rem;
+    }
 
-  <li>
-    <strong>Demystifying Privacy in 5G Stand Alone Networks</strong><br>
-    S. Eleftherakis, T. Otim, G. Santaromita, A. Diaz-Zayas, D. Giustiniano, N. Kourtellis<br>
-    <em>ACM MobiCom, 2024</em>
-  </li>
+    .links {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      margin-top: 20px;
+    }
 
-  <li>
-    <strong>SPRING+: Smartphone Positioning from a Single WiFi Access Point</strong><br>
-    S. Eleftherakis, G. Santaromita, M. Rea, J. Costa-Perez, D. Giustiniano<br>
-    <em>IEEE Transactions on Mobile Computing, 2024</em>
-  </li>
+    .links a {
+      padding: 10px 12px;
+      background: var(--accent-soft);
+      border-radius: 10px;
+      font-weight: 600;
+      text-align: center;
+    }
 
-  <li>
-    <strong>From 5G Single-Cell Signals to Pervasive Smartphone Positioning: A Real-World Study</strong><br>
-    S. Eleftherakis, Y. Zhao, X. Jiang, G. Lindmark, F. Gunnarsson, D. Giustiniano<br>
-    <em>Under review</em>
-  </li>
-</ul>
+    main {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      padding: 40px;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.04);
+    }
 
-<h2>Patent</h2>
+    h2 {
+      margin-top: 36px;
+      padding-top: 22px;
+      border-top: 1px solid var(--border);
+      font-size: 1.35rem;
+    }
 
-<ul>
-  <li>
-    <strong>A Method for Timing Advance Integrity Monitoring</strong><br>
-    S. Eleftherakis, Y. Zhao, X. Jiang, G. Lindmark, F. Gunnarsson, D. Giustiniano, T. Johansson<br>
-    Ericsson, P112699GR01, granted December 2025
-  </li>
-</ul>
+    h2:first-child {
+      margin-top: 0;
+      padding-top: 0;
+      border-top: none;
+    }
 
-<h2>Recent News</h2>
+    .intro {
+      font-size: 1.08rem;
+    }
 
-<ul>
-  <li><strong>Jan. 2026:</strong> Joined New York University Abu Dhabi as a Postdoctoral Associate.</li>
-  <li><strong>2025:</strong> Paper accepted at ACM WiSec.</li>
-  <li><strong>2024:</strong> Paper accepted at ACM MobiCom.</li>
-  <li><strong>2024:</strong> SPRING+ published in IEEE Transactions on Mobile Computing.</li>
-</ul>
+    .highlight {
+      background: var(--accent-soft);
+      padding: 18px 20px;
+      border-radius: 14px;
+      margin: 24px 0;
+      border-left: 5px solid var(--accent);
+    }
+
+    .tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 14px;
+    }
+
+    .tag {
+      background: #f1f3f5;
+      border: 1px solid var(--border);
+      padding: 8px 12px;
+      border-radius: 999px;
+      font-size: 0.94rem;
+    }
+
+    .pub {
+      margin-bottom: 22px;
+      padding-bottom: 18px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .pub:last-child {
+      border-bottom: none;
+    }
+
+    .pub-title {
+      font-weight: 700;
+      color: var(--text);
+    }
+
+    .venue {
+      color: var(--accent);
+      font-weight: 700;
+    }
+
+    .muted {
+      color: var(--muted);
+    }
+
+    .news li {
+      margin-bottom: 8px;
+    }
+
+    footer {
+      margin-top: 40px;
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+
+    @media (max-width: 820px) {
+      .container {
+        grid-template-columns: 1fr;
+        padding: 24px 16px;
+      }
+
+      .sidebar {
+        position: static;
+      }
+
+      main {
+        padding: 28px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <aside class="sidebar">
+      <img src="/images/profile.jpg" alt="Stavros Eleftherakis" class="profile-img" onerror="this.style.display='none'" />
+
+      <h1>Stavros Eleftherakis</h1>
+
+      <div class="role">
+        Postdoctoral Associate<br />
+        New York University Abu Dhabi<br />
+        Cyber Security and Privacy Lab
+      </div>
+
+      <div class="links">
+        <a href="mailto:se2937@nyu.edu">Email</a>
+        <a href="https://scholar.google.com/citations?user=AU1FtaYAAAAJ&hl=en&oi=ao" target="_blank" rel="noopener">Google Scholar</a>
+        <a href="https://www.linkedin.com/in/stavros-eleftherakis/" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="/files/cv.pdf">CV</a>
+      </div>
+    </aside>
+
+    <main>
+      <h2>About</h2>
+
+      <p class="intro">
+        I am a Postdoctoral Associate at New York University Abu Dhabi, working in the Cyber Security and Privacy Lab.
+        My research focuses on secure positioning systems, wireless security, privacy in cellular networks, and
+        AI-driven analysis for wireless systems.
+      </p>
+
+      <p>
+        I received my PhD in Telematics Engineering from Universidad Carlos III de Madrid, where I worked on positioning
+        systems and the security and privacy challenges of real-world wireless network deployments. My work spans WiFi
+        and 5G positioning, privacy vulnerabilities in 5G standalone networks, and secure wireless infrastructure.
+      </p>
+
+      <div class="highlight">
+        My research has appeared in venues including <strong>ACM MobiCom</strong>, <strong>ACM WiSec</strong>, and
+        <strong>IEEE Transactions on Mobile Computing</strong>, and has contributed to an Ericsson patent on integrity
+        monitoring for 5G Timing Advance.
+      </div>
+
+      <h2>Research Interests</h2>
+
+      <div class="tags">
+        <span class="tag">Secure positioning systems</span>
+        <span class="tag">Wireless security</span>
+        <span class="tag">5G/6G networks</span>
+        <span class="tag">Cellular privacy</span>
+        <span class="tag">Applied machine learning</span>
+        <span class="tag">Wireless networks</span>
+      </div>
+
+      <h2>Selected Publications</h2>
+
+      <div class="pub">
+        <div class="pub-title">SoK: Evaluating 5G-Advanced Protocols Against Legacy and Emerging Privacy and Security Attacks</div>
+        <div class="muted">S. Eleftherakis, D. Giustiniano, N. Kourtellis</div>
+        <div class="venue">ACM WiSec, 2025</div>
+      </div>
+
+      <div class="pub">
+        <div class="pub-title">Demystifying Privacy in 5G Stand Alone Networks</div>
+        <div class="muted">S. Eleftherakis, T. Otim, G. Santaromita, A. Diaz-Zayas, D. Giustiniano, N. Kourtellis</div>
+        <div class="venue">ACM MobiCom, 2024</div>
+      </div>
+
+      <div class="pub">
+        <div class="pub-title">SPRING+: Smartphone Positioning from a Single WiFi Access Point</div>
+        <div class="muted">S. Eleftherakis, G. Santaromita, M. Rea, J. Costa-Perez, D. Giustiniano</div>
+        <div class="venue">IEEE Transactions on Mobile Computing, 2024</div>
+      </div>
+
+      <div class="pub">
+        <div class="pub-title">From 5G Single-Cell Signals to Pervasive Smartphone Positioning: A Real-World Study</div>
+        <div class="muted">S. Eleftherakis, Y. Zhao, X. Jiang, G. Lindmark, F. Gunnarsson, D. Giustiniano</div>
+        <div class="venue">Under review</div>
+      </div>
+
+      <h2>Patent</h2>
+
+      <div class="pub">
+        <div class="pub-title">A Method for Timing Advance Integrity Monitoring</div>
+        <div class="muted">S. Eleftherakis, Y. Zhao, X. Jiang, G. Lindmark, F. Gunnarsson, D. Giustiniano, T. Johansson</div>
+        <div class="venue">Ericsson, P112699GR01, granted December 2025</div>
+      </div>
+
+      <h2>Recent News</h2>
+
+      <ul class="news">
+        <li><strong>Jan. 2026:</strong> Joined New York University Abu Dhabi as a Postdoctoral Associate.</li>
+        <li><strong>2025:</strong> Paper accepted at ACM WiSec.</li>
+        <li><strong>2024:</strong> Paper accepted at ACM MobiCom.</li>
+        <li><strong>2024:</strong> SPRING+ published in IEEE Transactions on Mobile Computing.</li>
+      </ul>
+
+      <h2>Education</h2>
+
+      <p>
+        <strong>PhD in Telematics Engineering</strong>, Universidad Carlos III de Madrid<br />
+        <span class="muted">Thesis: Positioning Systems and the Challenges of Security & Privacy for Real-World Wireless Networks Deployments</span>
+      </p>
+
+      <p>
+        <strong>MSc in Telematics Engineering</strong>, Universidad Carlos III de Madrid<br />
+        <strong>MSc in Applied and Computational Mathematics</strong>, University of Crete<br />
+        <strong>Diploma in Mathematics</strong>, University of Crete
+      </p>
+
+      <footer>
+        Last updated: May 2026
+      </footer>
+    </main>
+  </div>
+</body>
+</html>
